@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="noteForm.css">
+  <script type="text/javascript" src="noteForm.js"></script>
+  <title>notes</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+</head>
+
+<body onload="initPage()">
+  <h1>my task board</h1>
+  <p>Please fill-in details</p>
+  <div class="notebook" >
+  <form onSubmit="return saveNewNote()">
+    <ul>
+      <li>
+        <label for="dueDate">Due Date:</label>
+        <input type="datetime-local" id="dueDate" name="due_Date">
+      </li>
+ 
+      <li>
+        <label for="noteText">text:</label>
+        <textarea id="noteText" name="text_message"></textarea>
+      </li>
+      
+      <li class="button1">
+        <button type="submit">Save</button>
+      </li>
+      <li class="button2">
+        <button type="reset" value="Reset" >Reset</button>
+    </li>
+    </ul>
+  </form>
+
+  
+  <div>
+    <ul>
+      <li class="button3">
+        <button onclick="getInfoFromLocalStorage()">Get from local storage</button>
+      </li>
+    </ul>
+  </div>
+
+  
+  <div id="time">
+
+  </div>
+
+  <div class="container">    
+    <div class="row">
+      <div class="col-lg-3">
+      </div>
+      <div class="col-lg-3">
+      </div>
+      <div class="col-lg-3">
+      </div>
+      <div class="col-lg-3">
+      </div>
+      
+      
+    </div>
+  </div>
+
+</body>
+
+</html>
